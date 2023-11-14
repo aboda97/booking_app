@@ -59,7 +59,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 //Method to navigate to home screen after duration with animation
   void navigateToHomeView() {
     Future.delayed(
-      const Duration(seconds: 10),
+      const Duration(seconds: 5),
       () {
         Get.to(
           const HomeView(),
@@ -74,7 +74,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 3),
     );
     slideTextAnimate =
         Tween<Offset>(begin: const Offset(-1, 0), end: Offset.zero)
