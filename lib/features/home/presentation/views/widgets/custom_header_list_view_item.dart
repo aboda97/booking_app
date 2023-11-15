@@ -10,7 +10,7 @@ class CustomHeaderListViewItem extends StatelessWidget {
       aspectRatio: 3 / 4,
       child: Container(
         margin: const EdgeInsets.only(
-          left: 16.0,
+          right: 16.0,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(
