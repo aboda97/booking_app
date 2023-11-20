@@ -64,7 +64,7 @@ class BestSellerContainerItem extends StatelessWidget {
                           const SizedBox(
                             height: 8.0,
                           ),
-                          const Text('J.K Rowlling', style: Styles.textStyle14),
+                          const Text('J.K.Rowlling', style: Styles.textStyle14),
                           const SizedBox(
                             height: 16.0,
                           ),
