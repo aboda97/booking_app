@@ -1,5 +1,6 @@
 import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/book_details_button.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_details_custom_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_header_image.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +70,7 @@ class BooksDetailsBody extends StatelessWidget {
                 ),
               ],
             ),
-            
+            BookDetailsButton(),
           ],
         ),
       ),
