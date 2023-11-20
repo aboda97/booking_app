@@ -1,8 +1,8 @@
 import 'package:bookly_app/core/utils/asstes_variables.dart';
 import 'package:flutter/material.dart';
 
-class CustomHeaderListViewItem extends StatelessWidget {
-  const CustomHeaderListViewItem({super.key});
+class CustomHeaderImage extends StatelessWidget {
+  const CustomHeaderImage({super.key});
 
   @override
   Widget build(BuildContext context) {
