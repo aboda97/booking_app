@@ -14,7 +14,7 @@ class BooksDetailsBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
+        child: ListView(
           children: [
             const BookDetailsCustomAppBar(),
             Padding(
@@ -29,6 +29,7 @@ class BooksDetailsBody extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: Styles.textStyle24.copyWith(fontFamily: kGTSectraFine),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 6.0,
@@ -42,9 +43,7 @@ class BooksDetailsBody extends StatelessWidget {
                 fontStyle: FontStyle.italic,
                 color: Colors.grey,
               ),
-            ),
-            const SizedBox(
-              height: 12.0,
+              textAlign: TextAlign.center,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -70,7 +69,31 @@ class BooksDetailsBody extends StatelessWidget {
                 ),
               ],
             ),
-            BookDetailsButton(),
+            const SizedBox(
+              height: 16.0,
+            ),
+            const BookDetailsButton(),
+            const SizedBox(
+              height: 50.0,
+            ),
+            const Text(
+              'You can also like',
+              style: Styles.textStyle18,
+            ),
+            const SizedBox(
+              height: 16.0,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .25,
+              child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const CustomHeaderImage();
+                  },
+                  ),
+            )
           ],
         ),
       ),
