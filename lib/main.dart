@@ -27,7 +27,7 @@ class BookingApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => FeaturedBooksCubit(
-            getIt.get<HomeRepoImplementation>(),
+            getIt.get<HomeRepoImplementation>()..fetchTheFeaturedBooks(),
           ),
         ),
       ],

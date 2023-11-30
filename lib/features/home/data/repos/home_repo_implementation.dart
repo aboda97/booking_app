@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bookly_app/core/errors/failures.dart';
 import 'package:bookly_app/core/utils/api_services.dart';
 import 'package:bookly_app/features/home/data/models/book_home_model/book_home_model.dart';
@@ -49,6 +51,7 @@ class HomeRepoImplementation implements HomeRepo {
       if (e is DioException) {
         return left(ServerFailure.fromDioException(e));
       }
+      log(e.toString());
       return left(
         ServerFailure(
           e.toString(),
