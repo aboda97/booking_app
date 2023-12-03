@@ -1,13 +1,13 @@
-import 'package:bookly_app/core/utils/asstes_variables.dart';
 import 'package:flutter/material.dart';
 
 class CustomHeaderImage extends StatelessWidget {
-  const CustomHeaderImage({super.key});
+  final String imgurl;
+  const CustomHeaderImage({super.key, required this.imgurl});
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 3/4,
+      aspectRatio: 3 / 4,
       child: Container(
         margin: const EdgeInsets.only(
           right: 16.0,
@@ -19,11 +19,9 @@ class CustomHeaderImage extends StatelessWidget {
           border: Border.all(
             color: Colors.white,
           ),
-          image: const DecorationImage(
+          image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage(
-              AssetsVariables.bookingCoverImage,
-            ),
+            image: NetworkImage(imgurl),
           ),
         ),
       ),

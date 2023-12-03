@@ -18,9 +18,12 @@ class HeaderListViewBuilder extends StatelessWidget {
             child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                itemCount: 10,
+                itemCount: state.featuredBooksData.length,
                 itemBuilder: (context, index) {
-                  return const CustomHeaderImage();
+                  return CustomHeaderImage(
+                    imgurl: state.featuredBooksData[index].volumeInfo
+                        .imageLinks!.thumbnail,
+                  );
                 }),
           );
         } else if (state is FeaturedBooksFailure) {

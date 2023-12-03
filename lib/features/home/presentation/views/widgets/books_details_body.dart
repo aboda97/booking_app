@@ -19,7 +19,9 @@ class BooksDetailsBody extends StatelessWidget {
             const BookDetailsCustomAppBar(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: widthOfView * .2),
-              child: const CustomHeaderImage(),
+              child: const CustomHeaderImage(
+                  imgurl:
+                      'https://m.media-amazon.com/images/I/914pEgyd14L._AC_UF1000,1000_QL80_.jpg'),
             ),
             const SizedBox(
               height: 24.0,
@@ -86,13 +88,16 @@ class BooksDetailsBody extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * .25,
               child: ListView.builder(
-                  physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return const CustomHeaderImage();
-                  },
-                  ),
+                physics: const BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return const CustomHeaderImage(
+                    imgurl:
+                        'https://m.media-amazon.com/images/I/914pEgyd14L._AC_UF1000,1000_QL80_.jpg',
+                  );
+                },
+              ),
             )
           ],
         ),
