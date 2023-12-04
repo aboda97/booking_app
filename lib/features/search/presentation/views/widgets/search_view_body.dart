@@ -1,5 +1,5 @@
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/newest_books_container_item.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/newest_list_view_builder.dart';
 import 'package:bookly_app/features/search/presentation/views/widgets/custom_search_text_form_field.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ class SearchViewBody extends StatelessWidget {
             SizedBox(
               height: 16.0,
             ),
-            NewestBooksContainerItem(),
+            NewestListViewBuilder(),
           ],
         ),
       ),
