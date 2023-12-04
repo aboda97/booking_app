@@ -2,7 +2,7 @@ import 'package:bookly_app/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_details_button.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_details_custom_app_bar.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_header_image.dart';
+import 'package:bookly_app/core/widgets/custom_image_item.dart';
 import 'package:flutter/material.dart';
 
 class BooksDetailsBody extends StatelessWidget {
@@ -19,7 +19,7 @@ class BooksDetailsBody extends StatelessWidget {
             const BookDetailsCustomAppBar(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: widthOfView * .2),
-              child: const CustomHeaderImage(
+              child: const CustomImageItem(
                   imgurl:
                       'https://m.media-amazon.com/images/I/914pEgyd14L._AC_UF1000,1000_QL80_.jpg'),
             ),
@@ -92,7 +92,7 @@ class BooksDetailsBody extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return const CustomHeaderImage(
+                  return const CustomImageItem(
                     imgurl:
                         'https://m.media-amazon.com/images/I/914pEgyd14L._AC_UF1000,1000_QL80_.jpg',
                   );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class CustomHeaderImage extends StatelessWidget {
+class CustomImageItem extends StatelessWidget {
   final String imgurl;
-  const CustomHeaderImage({super.key, required this.imgurl});
+  const CustomImageItem({super.key, required this.imgurl});
 
   @override
   Widget build(BuildContext context) {

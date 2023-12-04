@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/widgets/custom_circluar_loading_indicator_widget.dart';
 import 'package:bookly_app/core/widgets/custom_error_widget.dart';
 import 'package:bookly_app/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_header_image.dart';
+import 'package:bookly_app/core/widgets/custom_image_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,9 +20,10 @@ class HeaderListViewBuilder extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: state.featuredBooksData.length,
                 itemBuilder: (context, index) {
-                  return CustomHeaderImage(
-                    imgurl: state.featuredBooksData[index].volumeInfo
-                        .imageLinks!.thumbnail,
+                  return CustomImageItem(
+                    imgurl: state.featuredBooksData[index].volumeInfo.imageLinks
+                            ?.thumbnail ??
+                        '',
                   );
                 }),
           );

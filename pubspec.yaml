@@ -39,6 +39,7 @@ dependencies:
   go_router: ^12.1.1
   google_fonts: ^6.1.0
   get_it: ^7.6.4
+  cached_network_image: ^3.3.0
 
 dev_dependencies:
 
