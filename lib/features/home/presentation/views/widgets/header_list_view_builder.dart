@@ -28,9 +28,13 @@ class HeaderListViewBuilder extends StatelessWidget {
                 }),
           );
         } else if (state is FeaturedBooksFailure) {
-          return CustomErrorMsg(errMsg: state.featuredErrMsg);
+          return Center(
+            child: CustomErrorMsg(errMsg: state.featuredErrMsg),
+          );
         } else {
-          return const CustomCircularIndicator();
+          return const Center(
+            child: CustomCircularIndicator(),
+          );
         }
       },
     );

@@ -13,7 +13,10 @@ class NewestContainerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.kBooksDetailsView);
+        GoRouter.of(context).push(
+          AppRouter.kBooksDetailsView,
+          extra: bookHomeModel,
+        );
       },
       child: Column(
         children: [
@@ -52,7 +55,7 @@ class NewestContainerItem extends StatelessWidget {
                         const SizedBox(
                           width: 22.0,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 80.0,
                         ),
                         Row(
@@ -62,7 +65,7 @@ class NewestContainerItem extends StatelessWidget {
                               size: 24,
                               color: Colors.amberAccent,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10.0,
                             ),
                             Text(

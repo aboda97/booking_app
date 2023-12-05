@@ -7,12 +7,10 @@ class CustomErrorMsg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        errMsg,
-        style: Styles.textStyle18.copyWith(
-          color: Colors.red,
-        ),
+    return Text(
+      errMsg,
+      style: Styles.textStyle18.copyWith(
+        color: Colors.red,
       ),
     );
   }

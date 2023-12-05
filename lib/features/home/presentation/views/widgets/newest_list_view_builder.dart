@@ -24,9 +24,9 @@ class NewestListViewBuilder extends StatelessWidget {
             },
           );
         } else if (state is NewestBooksFailure) {
-          return CustomErrorMsg(errMsg: state.newestErrMsg);
+          return Center(child: CustomErrorMsg(errMsg: state.newestErrMsg));
         } else {
-          return const CustomCircularIndicator();
+          return const Center(child: CustomCircularIndicator());
         }
       },
     );
